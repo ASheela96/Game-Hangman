@@ -1,6 +1,5 @@
 ﻿var app = angular.module("HangmanApp", []);
 app.controller("GameController", ['$scope', '$timeout', function ($scope, $timeout) {
-    $scope.demo = "something"
 
     var words = ["rat", "cat", "bat", "mat"];
     $scope.incorrectLettersChosen = [];

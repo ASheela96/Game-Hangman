@@ -5,12 +5,18 @@
     <title>Hangman App</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
     <script src="app.js"></script>
-    <link rel="stylesheet" href="progresscircle.css">  
+    <link rel="stylesheet" href="progresscircle.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2017.css">
+    <link rel="stylesheet" href="css/cssCard.css">
 </head>
 <body ng-app="HangmanApp" ng-controller="GameController">
-    <div>
+    <div class="w3-card position Card">
+        <div class="w3-panel w3-cyan">
+            <p class="panel w3-wide"> Game: Hangman </p>
+        </div>
         <!--<div>Guesses Left:: {{guesses}}</div>-->
-        <div class="circlechart" data-percentage={{guesses}}>Guesses Left:: {{guesses}}</div>
+        <div class="circlechart" data-percentage={{guesses}}>Guesses Left</div>
         <div>Incorrect Guesses:: <span ng-repeat="letter in incorrectLettersChosen">{{letter}}</span></div>
         <div>Correct Guesses:: <span ng-repeat="letter in correctLettersChosen">{{letter}}</span></div>
         <div>You have to guess: {{displayWord}}</div>
